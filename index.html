@@ -1,1 +1,161 @@
-Github Page
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="bupt iptv for mac">
+    <meta name="author" content="2hu">
+
+    <title>IPTV for Mac</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      @media all {
+          .container {
+              max-width: 780px;
+              padding: 0 @mid-space;
+          }
+      }
+      @media all and (min-width: 1800) {
+          .container {
+              max-width: 940px;
+              padding: 0 40px;
+          }
+      }
+
+      body {
+        padding-top: 50px;
+      }
+
+      .container.iptv-content,
+      .container.about-me,
+      .container.contact-me {
+        margin-top: 50px;
+      }
+
+      .well:before, .well:after {
+        content: "";
+        display: table;
+      }
+      .well:after {
+        clear: both;
+      }
+      .well {
+        zoom: 1;
+      }
+
+
+      .well a {
+        text-decoration: none;
+        display: inline-block;
+        height: 20px;
+        margin-bottom: 5px;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">IPTV for Mac</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li id="home" class="active"><a href="javascript:void(0)" onclick="show(1)">Home</a></li>
+            <li id="about"><a href="javascript:void(0)" onclick="show(2)">About</a></li>
+            <li id="contact"><a href="javascript:void(0)" onclick="show(3)">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div id="iptv-content" class="container iptv-content">
+      <h5>高清频道</h5>
+      <div class="well">
+        <a href="rtsp://officetv.bupt.edu.cn/CCTV-5-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> CCTV-5</a>
+        <a href="rtsp://officetv.bupt.edu.cn/CCTV-5plus-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> CCTV-5+</a>
+        <a href="rtsp://officetv.bupt.edu.cn/CCTV-1-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> CCTV-1</a>
+        <a href="rtsp://officetv.bupt.edu.cn/CCTV-6-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> CCTV-6</a>
+        <a href="rtsp://officetv.bupt.edu.cn/BTV-1-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> BTV-1</a>
+        <a href="rtsp://officetv.bupt.edu.cn/BTV-2-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> BTV-2</a>
+        <a href="rtsp://officetv.bupt.edu.cn/BTV-6-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> BTV-6</a>
+        <a href="rtsp://officetv.bupt.edu.cn/ZJWS-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> 浙江卫视</a>
+        <a href="rtsp://officetv.bupt.edu.cn/HNSW-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> 湖南卫视</a>
+        <a href="rtsp://officetv.bupt.edu.cn/JSWS-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> 江苏卫视</a>
+        <a href="rtsp://officetv.bupt.edu.cn/DFWS-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> 东方卫视</a>
+        <a href="rtsp://officetv.bupt.edu.cn/chc-HD" class="col-md-2"><span class="glyphicon glyphicon-play-circle"></span> 高清电影</a>
+      </div>
+    </div><!-- /.container -->
+
+    <div id="about-me" class="container about-me hidden">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">About This</h3>
+        </div>
+        <div class="panel-body">
+          <p>It's for mac user to watch the iptv.</p>
+          <p>And it's better to make the vlc player be the default to open 'rtsp' protocol.</p>
+          <p>Or right click to copy the link.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-me" class="container contact-me hidden">
+      <h2>Please don't!</h2>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+      function show(who) {
+        switch(who) {
+          case 1:
+            document.getElementById('iptv-content').className = 'container iptv-content';
+            document.getElementById('about-me').className     = 'container about-me hidden';
+            document.getElementById('contact-me').className   = 'container contact-me hidden';
+
+            document.getElementById('home').className    = 'active';
+            document.getElementById('about').className   = '';
+            document.getElementById('contact').className = '';
+            break;
+          case 2:
+            document.getElementById('iptv-content').className = 'container iptv-content hidden';
+            document.getElementById('about-me').className     = 'container about-me';
+            document.getElementById('contact-me').className   = 'container contact-me hidden';
+
+            document.getElementById('home').className    = '';
+            document.getElementById('about').className   = 'active';
+            document.getElementById('contact').className = '';
+            break;
+          case 3:
+            document.getElementById('iptv-content').className = 'container iptv-content hidden';
+            document.getElementById('about-me').className     = 'container about-me hidden';
+            document.getElementById('contact-me').className   = 'container contact-me';
+
+            document.getElementById('home').className    = '';
+            document.getElementById('about').className   = '';
+            document.getElementById('contact').className = 'active';
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
